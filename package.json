@@ -10,8 +10,10 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.3",
+    "@vant/nuxt": "^1.0.7",
     "axios": "^1.10.0",
     "nuxt": "^3.8.2",
+    "vant": "^4.9.21",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5"
   },

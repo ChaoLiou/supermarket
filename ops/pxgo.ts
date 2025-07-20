@@ -361,7 +361,7 @@ const formatter = {
     );
     return {
       k: product.a,
-      f: product.f,
+      f: product.i === "Y" ? product.f / 2 : product.f,
       i: product.i,
       l: avg_price,
       m: avg_unit,

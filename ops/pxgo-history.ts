@@ -2,14 +2,14 @@ import type { ProductPrice } from "./pxgo";
 import { readData, writeData } from "./utils";
 
 export type ProductPriceHistory = Omit<ProductPrice, "f" | "l" | "m" | "j"> & {
-  history: Pick<ProductPrice, "f" | "l" | "m" | "j">[];
+  a: Pick<ProductPrice, "f" | "l" | "m" | "j">[];
 };
 
 const groupPriceHistory = (productPrices: ProductPrice[]) =>
   productPrices.reduce((prev, curr) => {
     const target = prev.find((x) => x.k === curr.k);
     if (target) {
-      target.history.push({
+      target.a.push({
         f: curr.f,
         l: curr.l,
         m: curr.m,
@@ -20,7 +20,7 @@ const groupPriceHistory = (productPrices: ProductPrice[]) =>
       prev.push({
         k: curr.k,
         i: curr.i,
-        history: [
+        a: [
           {
             f: curr.f,
             l: curr.l,

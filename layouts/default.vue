@@ -1,19 +1,22 @@
-<script setup lang="ts">
-import "vant/lib/index.css";
-import AppFooter from "~/components/AppFooter.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <main class="flex flex-col min-h-svh">
-    <slot />
-    <AppFooter />
-  </main>
+  <v-app>
+    <v-app-bar scroll-behavior="elevate">
+      <template v-slot:prepend>
+        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+      </template>
+      <v-app-bar-title>PXGo</v-app-bar-title>
+      <template v-slot:append>
+        <v-btn icon="mdi-dots-vertical"></v-btn>
+      </template>
+    </v-app-bar>
+    <v-main>
+      <v-container fluid>
+        <slot />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
-<style lang="css">
-body {
-  font-family: "Noto Sans TC", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-</style>
+<style lang="css"></style>

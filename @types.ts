@@ -1,0 +1,21 @@
+export type Shop = {
+  shopNo: string;
+  shopName: string;
+  address: string;
+  longitude: string;
+  latitude: string;
+  shippingDistance: string;
+  hourWorkStartTime: string;
+  hourWorkEndTime: string;
+  hourRestStatus: number;
+  hourEmergenciesRestStartDate: null;
+  hourEmergenciesRestEndDate: null;
+  hourRestNotice: string;
+  distance: number;
+  isOpen: number;
+  goodsInventory: null;
+  estimatedDeliveryTimeStart: null;
+  estimatedDeliveryTimeEnd: null;
+  isShipping: number;
+  batchGoodsInventorys: null;
+};
